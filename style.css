@@ -1,0 +1,281 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica;
+  background: rgba(71, 147, 227, 1);
+  padding: 0;
+  margin: 0;
+}
+
+
+.container{
+  max-width: 1215px;
+  margin: 10px auto;
+  padding: 0 15px;
+}
+
+.table-wrapper {
+  display: none;
+}
+
+table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+  box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
+}
+
+table td,
+table th {
+  text-align: center;
+  padding: 5px;
+}
+
+table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+
+table thead th {
+  color: #ffffff;
+  background: #4FC3A1;
+}
+
+table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+/* Responsive */
+
+.box{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination {
+  display: flex;
+  background-color: #4FC3A1;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.pagination__item {
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.pagination__item--active {
+  background: #324960;
+}
+.extraInfo{
+  display: grid;
+}
+.extraInfo li{
+  margin-bottom: 5px;
+}
+textarea {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  width: 335px;
+  height: 140px;
+  padding: 5px;
+  resize: none;
+}
+.down::after{
+  content: "▼";
+}
+.up::after{
+  content: "▲";
+}
+.tableAdd{
+  display: none;
+}
+.tableAdd__btn{
+  max-width: 200px;
+}
+.error{
+  color: #ff3860;
+  font-size: 12px;
+}
+.tableAdd__item{
+  display: grid;
+  margin-bottom: 12px;
+}
+.open-form{
+  padding: 4px 10px;
+}
+.search {
+  display: flex;
+}
+.search__input,
+.tableAdd__item input{
+  display: block;
+  height: 10px;
+  padding: 12px 6px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+.tableAdd__btn {
+  height: 30px;
+}
+.search__input:focus,
+.tableAdd__item input:focus {
+  border-color: #bdbdbd;
+  outline: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.data-set__min,
+.data-set__max{
+  padding: 5px 10px;
+}
+
+.btn {
+  cursor: pointer;
+  border: 1px solid #bdbdbd;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.search__btn:hover{
+  background-color: #bdbdbd;
+}
+
+.search input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search__btn {
+  position: relative;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left-width: 0;
+}
+
+@media (max-width: 767px) {
+  table {
+    display: block;
+    width: 100%;
+  }
+
+  table-wrapper:before {
+    content: "Scroll horizontally >";
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: white;
+    padding: 0 0 10px;
+  }
+
+  table thead,
+  table tbody,
+  table thead th {
+    display: block;
+  }
+
+  table thead th:last-child {
+    border-bottom: none;
+  }
+
+  table thead {
+    float: left;
+  }
+
+  table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+
+  table td,
+  table th {
+    padding: 20px 8px 8px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+
+  table thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+  }
+
+  table tbody tr {
+    display: table-cell;
+  }
+
+  table tbody tr:nth-child(odd) {
+    background: none;
+  }
+
+  table tr:nth-child(even) {
+    background: transparent;
+  }
+
+  table tr td:nth-child(odd) {
+    background: #F8F8F8;
+    border-right: 1px solid #E6E4E4;
+  }
+
+  table tr td:nth-child(even) {
+    border-right: 1px solid #E6E4E4;
+  }
+
+  table tbody td {
+    display: block;
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  .box{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tableAdd__btn{
+    margin-bottom: 10px;
+  }
+  textarea{
+    width: 280px;
+  }
+}
