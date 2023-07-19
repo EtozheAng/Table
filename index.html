@@ -1,52 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="style.css" rel="stylesheet">
-  <title>Table</title>
-</head>
-<body>
-  <div class="container">
-    <div class="data-set">
-      <h2 class="table">Выбририте набор данных:</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>Table</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="data-set">
+        <h2 class="table">Выбририте набор данных:</h2>
         <button class="btn data-set__min">Маленький</button>
         <button class="btn data-set__max">Большой</button>
-    </div>
-    <div class="table-wrapper">
-      <div class="box">
-        <button class="btn open-form">Добавить</button>
-        <form class="tableAdd" action="">
-          <div class="tableAdd__item">
-            <input id="id" name="id" type="number" placeholder="id">
-            <div class="error"></div>
+      </div>
+      <div class="table-wrapper">
+        <div class="box">
+          <button class="btn open-form">Добавить</button>
+          <form class="tableAdd" action="">
+            <div class="tableAdd__item">
+              <input id="id" name="id" type="number" placeholder="id" />
+              <div class="error"></div>
+            </div>
+            <div class="tableAdd__item">
+              <input
+                id="firstName"
+                name="firstName"
+                type="text"
+                placeholder="firstName"
+                value="Adam"
+              />
+              <div class="error"></div>
+            </div>
+            <div class="tableAdd__item">
+              <input
+                id="lastName"
+                name="lastName"
+                type="text"
+                placeholder="lastName"
+                value="Smith"
+              />
+              <div class="error"></div>
+            </div>
+            <div class="tableAdd__item">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="email"
+                value="tron@mail.ru"
+              />
+              <div class="error"></div>
+            </div>
+            <div class="tableAdd__item">
+              <input
+                id="phone"
+                name="phone"
+                type="phone"
+                placeholder="phone"
+                value="(321)880-2638"
+              />
+              <div class="error"></div>
+            </div>
+            <button disabled="true" type="submit" class="btn tableAdd__btn">
+              Добавить в таблицу
+            </button>
+          </form>
+          <div class="search">
+            <input class="search__input" type="text" />
+            <button class="btn search__btn">Найти</button>
           </div>
-          <div class="tableAdd__item">
-            <input id="firstName" name="firstName" type="text" placeholder="firstName" value="Adam">
-            <div class="error"></div>
-          </div>
-          <div class="tableAdd__item">
-            <input id="lastName" name="lastName" type="text" placeholder="lastName" value="Smith">
-            <div class="error"></div>
-          </div>
-          <div class="tableAdd__item">
-            <input id="email" name="email" type="email" placeholder="email" value="tron@mail.ru">
-            <div class="error"></div>
-          </div>
-          <div class="tableAdd__item">
-            <input id="phone" name="phone" type="phone" placeholder="phone" value="(321)880-2638">
-            <div class="error"></div>
-          </div>
-          <button disabled="true" type="submit" class="btn tableAdd__btn">Добавить в таблицу</button>
-        </form>
-        <div class="search">
-          <input class="search__input" type="text">
-          <button class="btn search__btn">Найти</button>
         </div>
       </div>
     </div>
-  </div>
-<script type="module" src="js/script.js"></script>
-</body>
+    <script type="module" src="js/script.js"></script>
+  </body>
 </html>
